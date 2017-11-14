@@ -1,0 +1,27 @@
+﻿extends shared/admin/layout
+
+block main-content
+	.wrapper(ng-if="vm.identity.isInRole('admin')")
+		header.main-header(ng-include="'/partials/admin/layout/navbar'")
+		aside.main-sidebar
+			div(ng-include="'/partials/admin/layout/sidebar'")
+		.shuffle-animation.content-wrapper(data-ng-view='')
+		footer.main-footer
+			.pull-right.hidden-xs
+				b Version
+				|  2.0
+			strong
+				| Copyright &copy;
+				a.text-black(href='/') Shawn Weblinks
+				| .
+				|  All rights reserved.
+
+	div(ng-if="!vm.identity.isInRole('admin')")
+		.shuffle-animation(data-ng-view='')
+	
+	.blockUI.blockMsg.blockPage(style='z-index: 1011; position: fixed; padding: 0px; margin: 0px; width: 30%; top: 40%; left: 35%; text-align: center; color: rgb(0, 0, 0); border: 0px; cursor: wait;', ng-if="vm.startLoader")
+		.loading-message.loading-message-boxed(style="position: absolute;top: 40%;left: 40%;")
+			img(src='/admin/css/images/loading-spinner-grey.gif', align='')
+			span   LOADING...
+		.blockUI(style='display:none')
+		.blockUI.blockOverlay(style='z-index: 1000; border: none; margin: 0px; padding: 0px; width: 100%; height: 100%; top: 0px; left: 0px; background-color: rgb(85, 85, 85); opacity: 0.05; cursor: wait; position: fixed;')

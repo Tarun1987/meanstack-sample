@@ -1,0 +1,11 @@
+extends shared/website/layout
+block main-content
+	header(ng-include="'/partials/website/layout/navbar'")
+	
+	div(data-ng-view='')
+	
+	.div(ng-include="'/partials/website/layout/footer'")
+
+	.loader(ng-if="__startLoader")
+		.loader-container
+			img(src='/website/images/loader.gif')

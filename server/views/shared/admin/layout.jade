@@ -1,0 +1,18 @@
+﻿doctype html
+html
+  head
+    title Shawn Weblinks
+    link(rel="shortcut icon", href="/admin/favicon.ico", type="image/x-icon")
+    link(href="/admin/css/bootstrap.min.css", rel="stylesheet")
+    link(href="/admin/css/font-awesome.min.css", rel="stylesheet")
+    link(href="/admin/css/ionicons.min.css", rel="stylesheet")
+    link(href="/admin/css/trackit.min.css", rel="stylesheet")
+    link(href="/admin/css/_all-skins.min.css", rel="stylesheet")
+    link(href="/admin/css/site.css", rel="stylesheet")
+    link(href="/admin/css/animate.css", rel="stylesheet")
+    link(href="/admin/css/toastr.min.css", rel="stylesheet")
+    link(href="/admin/css/bootstrap3-wysihtml5.min.css", rel="stylesheet")
+  body(ng-app='app', ng-controller="page as vm", ng-class="{'skin-blue': vm.identity.isInRole('admin'), 'lockscreen': !vm.identity.isInRole('admin')}")
+    include   currentUser
+    block main-content
+    include   scripts

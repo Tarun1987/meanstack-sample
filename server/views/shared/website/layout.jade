@@ -1,0 +1,39 @@
+﻿doctype html
+html
+    head
+    title Shawn WebLinks
+    meta(charset='utf-8', http-equiv="Content-Type",content="text/html")
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width,initial-scale=1')
+
+    link(href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
+    link(rel='stylesheet', href='//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css')
+    link(rel='stylesheet', href='/website/css/ws.all-min.css')
+    link(rel='shortcut icon', href='/website/ico/favicon.png')
+    script.
+        window.fbAsyncInit = function() {
+            FB.init({
+            appId      : '652359334963179',
+            xfbml      : true,
+            version    : 'v2.8'
+            });
+
+            if(FB.AppEvents)
+                FB.AppEvents.logPageView();
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+ body(ng-app='swlApp')
+    div#fb-root
+    include   currentUser
+    block main-content
+    include   scripts

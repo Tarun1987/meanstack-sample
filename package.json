@@ -1,0 +1,48 @@
+{
+  "name": "1",
+  "version": "1.0.0",
+  "description": "Shawn Weblinks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shawn Weblinks",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "bower": "^1.7.9",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify": "0.0.15",
+    "gulp-uglify": "^2.1.2",
+    "run-sequence": "^1.2.2"
+  },
+  "engines": {
+    "node": "8.1.4",
+    "npm": "3.10.5"
+  },
+  "dependencies": {
+    "asynquence": "^0.10.0",
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "excel": "^0.1.7",
+    "express": "^4.14.0",
+    "express-fileupload": "0.0.5",
+    "express-session": "^1.14.0",
+    "jade": "^1.11.0",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.5.7",
+    "morgan": "^1.7.0",
+    "node-minify": "^2.0.2",
+    "nodemailer": "~0.7.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "pay-u": "0.0.414",
+    "request": "^2.79.0",
+    "request-ip": "^1.2.3",
+    "stylus": "^0.54.5"
+  }
+}
